@@ -1,8 +1,8 @@
 // ─── Supabase 客户端与云端 CRUD ───────────────────────────────────────────────
 // Supabase 客户端通过 index.html CDN 全局加载（window.supabase）
 
-const SUPABASE_URL     = "https://eythlgkxbwgjvqqfexlz.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV5dGhsZ2t4YndnanZxcWZleGx6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwMzM1NzcsImV4cCI6MjA5NTYwOTU3N30.giX03Eef5nptsiSfsKEzKNejLeudKabArGpzVrSfvvI";
+const SUPABASE_URL      = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 export const sb = typeof window !== "undefined" && window.supabase
   ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
